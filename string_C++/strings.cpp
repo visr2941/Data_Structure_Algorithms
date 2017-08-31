@@ -47,7 +47,7 @@ void PrintPermutation(string s, int index)
     while(k++<s.size()-index)
     {
         s_mod = RotateWord(s_mod, index);
-        if(n<s.size()-2)
+        if(index<s.size()-2)
             PrintPermutation(s_mod, index+1);
         else
             out << s_mod << endl;
