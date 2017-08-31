@@ -1,6 +1,8 @@
 #include <iostream>
 #include <fstream>
+
 #include "strings.h"
+
 using namespace std;
 
 /************************************************************************* 
@@ -13,7 +15,7 @@ using namespace std;
 *            void
 **************************************************************************/
 
-string rotateWord(string s, int index)
+string RotateWord(string s, int index)
 {
     string ret_str;
     for(int j = 0; j < index; j++)
@@ -36,7 +38,7 @@ string rotateWord(string s, int index)
 *  return:
 *            void
 **************************************************************************/    
-void printPermutation(string s, int index)
+void PrintPermutation(string s, int index)
 {
     string s_mod=s;
     int k = 0;
@@ -44,9 +46,9 @@ void printPermutation(string s, int index)
     static ofstream out("permut_words.txt");
     while(k++<s.size()-index)
     {
-        s_mod = rotateWord(s_mod, index);
+        s_mod = RotateWord(s_mod, index);
         if(n<s.size()-2)
-            printPermutation(s_mod, index+1);
+            PrintPermutation(s_mod, index+1);
         else
             out << s_mod << endl;
     }
@@ -66,7 +68,7 @@ void printPermutation(string s, int index)
 *            string ret_str - "text" string without "remove_str"
 **************************************************************************/
 
-string CensorString1(string text, string remove_str)
+string CensorString(string text, string remove_str)
 {
     unsigned int temp_cnt;
     char char_text, char_remove;
