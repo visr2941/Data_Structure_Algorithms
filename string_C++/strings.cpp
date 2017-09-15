@@ -41,16 +41,30 @@ string RotateWord(string s, int index)
 void PrintPermutation(string s, int index)
 {
     string s_mod=s;
-    int k = 0;
-
+    int k = 0; 
+    static int str_size = s.size();
     static ofstream out("permut_words.txt");
-    while(k++<s.size()-index)
+	
+    if (str_size <=2)
     {
-        s_mod = RotateWord(s_mod, index);
-        if(index<s.size()-2)
-            PrintPermutation(s_mod, index+1);
-        else
+        while(str_size--)
+        {
             out << s_mod << endl;
+            s_mod = RotateWord(s_mod, index);
+        }
+    }   
+    else
+    {
+        while(k++<str_size-index)
+        {	       
+            s_mod = RotateWord(s_mod, index);
+            if(index>=str_size-3)
+                out << s_mod << endl;
+            if(index<str_size-2)
+                PrintPermutation(s_mod, index+1);
+            else
+                break;
+        }
     }
 }
 
