@@ -15,7 +15,7 @@ using namespace std;
 *            void
 **************************************************************************/
 
-string RotateWord(string s, int index)
+string RotateWord(string s, int index=0)
 {
     string ret_str;
     for(int j = 0; j < index; j++)
@@ -38,7 +38,7 @@ string RotateWord(string s, int index)
 *  return:
 *            void
 **************************************************************************/    
-void PrintPermutation(string s, int index)
+void PrintPermutation(string s, int index=0)
 {
     string s_mod=s;
     int k = 0; 
