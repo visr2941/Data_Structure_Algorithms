@@ -82,7 +82,7 @@ void PrintPermutation(string s, int index=0)
 *            string ret_str - "text" string without "remove_str"
 **************************************************************************/
 
-string CensorString(string text, string remove_str)
+string CensorString1(string text, string remove_str)
 {
     unsigned int temp_cnt;
     char char_text, char_remove;
@@ -105,6 +105,25 @@ string CensorString(string text, string remove_str)
                     text.erase(i, j+1);
             }
         }
+    }
+    ret_str = text;
+
+    return ret_str;
+}
+
+// using more C++ string methods
+string CensorString2(string text, string remove_str)
+{
+    unsigned int pos;
+    string ret_str;
+
+
+    for (int i = 0; i<text.size(); i++)
+    {
+        pos = text.find(remove_str);
+        if(pos>=text.size())
+            break;
+        text.erase(pos,remove_str.size());
     }
     ret_str = text;
 
