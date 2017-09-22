@@ -22,7 +22,7 @@ string Int2bin(int intValue, int nBits = 8)
     }
     
     string bin;
-    int divi = intValue, rem, i=0;
+    int divi = intValue, rem;
     char arr[nBits] = {0};
     
     while(--nBits)
