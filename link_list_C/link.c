@@ -10,6 +10,8 @@ typedef struct node
 	struct node * nxtptr;
 } Node;
 
+/* we use double pointer to avoid the change of head pointer in middle of the code when we are trying to delete the node 0 *
+*  (good coding). If we have a double pointer, we will not change the head pointer even if we are deleting node 0.         */
 
 void insert_node(Node **head, uint8_t pos, uint16_t data)
 {
