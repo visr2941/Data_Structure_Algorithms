@@ -1,3 +1,12 @@
+
+#include <iostream>
+#include <cmath>
+#include <string>
+
+using namespace std;
+
+/* function to change the integer value to nBits bit string */
+/* It could have been also implemented using stack STL */
 string Int2bin(int intValue, int nBits = 8)
 {
     if (nBits<0)
@@ -13,7 +22,7 @@ string Int2bin(int intValue, int nBits = 8)
     }
     
     string bin;
-    int divi = intValue, rem, i=0;
+    int divi = intValue, rem;
     char arr[nBits] = {0};
     
     while(--nBits)
