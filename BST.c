@@ -67,8 +67,7 @@ void delete (bst_node ** root, int data)
     {
        bst_node ** temp = findLowest(&((*nodeDeleted)->right));
        (*nodeDeleted)->data = (*temp)->data;
-        free(*temp);
-        *temp = NULL;
+       delete (temp, (*temp)->data);
     }
         
 }
