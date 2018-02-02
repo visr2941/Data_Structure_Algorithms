@@ -1,3 +1,6 @@
+#include <stdio.h>
+
+/* Compleity O(n^2). */
 void bubble_sort(int arr[], int size)
 {
     int temp, i, j = 0, flag=0;
