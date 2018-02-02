@@ -62,7 +62,11 @@ int findMajority(int arr[], int start, int end)
     else 
     {
         // recursive call to check the majority in 1st half 
-        // and if there is no majority .
+        // and if there is no majority then check the next
+	// half. If there is a majority, check the count and 
+	// if that is not greater than array length divided 
+	// by 2, return -1 and check the next half, else that
+	// element found in first half is the majority elem.
         maj1 = findMajority(arr, start, mid);
         if(maj1 == -1)
         {
