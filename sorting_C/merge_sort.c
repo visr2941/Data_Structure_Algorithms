@@ -1,4 +1,3 @@
-/* C program for Merge Sort */
 #include<stdlib.h>
 #include<stdio.h>
 
@@ -11,11 +10,13 @@ void printArray(int A[], int size)
     printf("\n");
 }
 
+/* this function merge two sorted arrays into a single sorted
+** array. */
 void merge(int left[], int right[], int n1, int n2, int A[])
 {
     int i=0, j=0, k=0;
     
-    /* Merge the temp arrays back into arr[l..r]*/
+    // Merge the temp arrays back into arr[l..r]
     while (i < n1 && j < n2)
     {
         if (left[i] <= R[j])
@@ -31,8 +32,7 @@ void merge(int left[], int right[], int n1, int n2, int A[])
         k++;
     }
  
-    /* Copy the remaining elements of L[], if there
-       are any */
+    // Copy the remaining elements of left[], if there are any
     while (i < n1)
     {
         A[k] = left[i];
@@ -40,8 +40,7 @@ void merge(int left[], int right[], int n1, int n2, int A[])
         k++;
     }
  
-    /* Copy the remaining elements of R[], if there
-       are any */
+    // Copy the remaining elements of right[], if there are any
     while (j < n2)
     {
         A[k] = right[j];
@@ -50,13 +49,20 @@ void merge(int left[], int right[], int n1, int n2, int A[])
     }
     
 }
- 
+
+/* this sorting method is a O(nlogn) time complexity sorting
+** algorithm. the main array is divided into two equal (unequal)
+** halves and those are sorted first and then merged to get a 
+** new sorted array. the main function calls itself recursively 
+** to sort the divided arrays and then merge to get a single
+** sorted array. */
 void mergeSort(int arr[], int n)
 {
     if (n < 2)
       return;
     int mid = n/2;
     
+    // dividing array in two halves and filling them
     int left[mid], right[n-mid];
     for(int i = 0; i < mid; i++)
         left[i] = arr[i];
@@ -64,10 +70,13 @@ void mergeSort(int arr[], int n)
     for(int i = 0; i < n-mid; i++)
         right[i] = arr[mid+i];    
 
-
+    // calling mergeSort() function recursively to sort
+    // the new smaller arrays.
     mergeSort(left, mid);
     mergeSort(right, n-mid);
     
+    // after two halves are sorted, merge them to get a
+    // single merged sorted array
     merge(left, right, mid, n-mid, arr);
 }
 
