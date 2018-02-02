@@ -1,13 +1,14 @@
 #include <stdio.h>
 
 
+
 /* this function will find the majority number in the array i.e count
 ** of that number is more than 50% else it will return -1. This algorithm
 ** works on the fact that the majority in main array will be definitely a
 ** majority in either of the half array. So, we check recursively to find
 ** the majority. Complexity is O(nlogn).
 */
-int findMajority(int arr[], int start, int end)
+/*int findMajority(int arr[], int start, int end)
 {
     int maj, mid = (start + end)/2, i, maj1, maj2, cnt1=0, cnt2=0;
     
@@ -37,6 +38,62 @@ int findMajority(int arr[], int start, int end)
             return maj1;
         else
             return -1;
+    }
+    
+}*/
+
+/* this function will find the majority element in the array i.e count
+** of that eleemnt is more than 50% else it will return -1. This algorithm
+** works on the fact that the majority in main array will be definitely a
+** majority in either of the half array and to reduce the time complexity,
+** we can only choose the half where majority exist, ignoring the other half.
+** So, we check recursively to find the majority in one half. Complexity is O(n).
+*/
+int findMajority(int arr[], int start, int end)
+{
+    int maj, mid = (start + end)/2, i, maj1, maj2, cnt1=0, cnt2=0, temp1, temp2;
+    
+    //if array has only one number, that is the majority
+    if(start >= end-1)
+        if(arr[start]==arr[end])
+            return arr[start];
+        else 
+            return -1;
+    else 
+    {
+        // recursive call to check the majority in 1st half 
+        // and if there is no majority .
+        maj1 = findMajority(arr, start, mid);
+        if(maj1 == -1)
+        {
+            maj2 = findMajority(arr, mid+1, end);
+            for(i = 0; i <= end; i++)
+            {
+                if(arr[i]==maj2) 
+                    cnt2++;
+            }
+
+            // based on the count, return the majority
+            if(cnt2 > (end+1)/2)
+                return maj2;
+            else
+                return -1; 
+        }
+        else
+        {
+            for(i = 0; i <= end; i++)
+            {
+                if(arr[i]==maj1)
+                    cnt1++;
+            }
+
+            // based on the count, return the majority
+            if(cnt1 > (end+1)/2)
+                return maj1;
+            else
+                return -1;
+        }
+
     }
     
 }
