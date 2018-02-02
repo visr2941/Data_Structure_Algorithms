@@ -11,24 +11,21 @@ void printArray(int A[], int size)
     printf("\n");
 }
 
-void merge(int L[], int R[], int n1, int n2, int A[])
+void merge(int left[], int right[], int n1, int n2, int A[])
 {
-    int i, j, k;
+    int i=0, j=0, k=0;
     
     /* Merge the temp arrays back into arr[l..r]*/
-    i = 0; // Initial index of first subarray
-    j = 0; // Initial index of second subarray
-    k = 0; // Initial index of merged subarray
     while (i < n1 && j < n2)
     {
-        if (L[i] <= R[j])
+        if (left[i] <= R[j])
         {
-            A[k] = L[i];
+            A[k] = left[i];
             i++;
         }
         else
         {
-            A[k] = R[j];
+            A[k] = right[j];
             j++;
         }
         k++;
@@ -38,7 +35,7 @@ void merge(int L[], int R[], int n1, int n2, int A[])
        are any */
     while (i < n1)
     {
-        A[k] = L[i];
+        A[k] = left[i];
         i++;
         k++;
     }
@@ -47,7 +44,7 @@ void merge(int L[], int R[], int n1, int n2, int A[])
        are any */
     while (j < n2)
     {
-        A[k] = R[j];
+        A[k] = right[j];
         j++;
         k++;
     }
@@ -60,20 +57,18 @@ void mergeSort(int arr[], int n)
       return;
     int mid = n/2;
     
-    int L[mid], R[n-mid];
+    int left[mid], right[n-mid];
     for(int i = 0; i < mid; i++)
-        L[i] = arr[i];
+        left[i] = arr[i];
     
     for(int i = 0; i < n-mid; i++)
-        R[i] = arr[mid+i];    
-    
-    int sizeL = sizeof(L)/sizeof(L[0]);
-    int sizeR = sizeof(R)/sizeof(R[0]);
+        right[i] = arr[mid+i];    
 
-    mergeSort(L, sizeL);
-    mergeSort(R, sizeR);
+
+    mergeSort(left, mid);
+    mergeSort(right, n-mid);
     
-    merge(L, R, sizeL, sizeR, arr);
+    merge(left, right, mid, n-mid, arr);
 }
 
 
