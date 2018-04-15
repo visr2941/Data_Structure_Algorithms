@@ -78,8 +78,8 @@ void delete (bst_node ** root, int data)
     }
     /* if the node has a sub-tree on right (nothing on left)
     ** delete the node and attach the right sub-tree to the main 
-    ** tree. Samething will happen if nothing is present on left
-    ** but there is sub-tree on right
+    ** tree. Samething will happen if nothing is present on right
+    ** but there is sub-tree on left
     */
     else if ((*nodeDeleted)->left == NULL)
     {
