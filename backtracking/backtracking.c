@@ -29,7 +29,7 @@ static void PrintAllBinaryHelper(char * str, int digit);
  ************************** Global Functions *********************************************
 ******************************************************************************************/
 
-void printSubset(char * MainArr, int size)
+void PrintSubset(char * MainArr, int size)
 {
     char arrMod[size];
     char chosenNew[size];
