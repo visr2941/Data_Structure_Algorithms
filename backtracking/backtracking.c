@@ -13,12 +13,13 @@ static void InsertAndArrageElement(char * inputArr, char ts, int pos, int size);
 static void RemoveAndArrageElement(char * inputArr, int pos, int size);
 static void PrintArrayElement(char * ipArr, int size);
 
+static void PrintAllBinaryHelper(char * str, int digit);
+
 
 /*****************************************************************************************
  ************************** GLOBAL VARIABLES *********************************************
 ******************************************************************************************/
 
-int chsCnt = 0;
 
 
 /******************************************************************************************/
@@ -38,6 +39,13 @@ void printSubset(char * MainArr, int size)
         
     printSubsetHelper(arrMod, chosenNew, size);
     
+}
+
+void PrintAllBinary(int digit)
+{
+    char str[digit+1];
+    str[digit] = '\0';
+    PrintAllBinaryHelper(str, digit);
 }
 
 
@@ -95,6 +103,9 @@ static void InsertAndArrageElement(char * inputArr, char ts, int pos, int size)
 
 static void printSubsetHelper( char * arr, char * chosen, int size )
 {    
+    
+    static int chsCnt = 0;
+    
     if (arr[0]==0)
     {
         PrintArrayElement(chosen, size);
@@ -119,3 +130,20 @@ static void printSubsetHelper( char * arr, char * chosen, int size )
     }
 
 }
+
+
+static void PrintAllBinaryHelper(char * str, int digit)
+{
+    static int cnt = digit;
+    
+    if(digit == 0)
+        printf("%s\n", str);
+    else
+    {
+        str[cnt-digit] = '0';    
+        PrintAllBinaryHelper(str, digit-1);
+        str[cnt-digit] = '1';    
+        PrintAllBinaryHelper(str, digit-1);   
+    }
+}
+
