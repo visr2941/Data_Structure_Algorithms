@@ -2,7 +2,7 @@
 
 #define _BACK_TRACK
 
-void printSubset(char * MainArr, int size);
+void PrintSubset(char * MainArr, int size);
 void PrintAllBinary(int digit);
 
 #endif
