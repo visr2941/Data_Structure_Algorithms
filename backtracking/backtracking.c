@@ -46,7 +46,7 @@ void printSubset(char * MainArr, int size)
  ************************** Local Functions *********************************************
 ******************************************************************************************/
 
-void PrintArrayElement(char * ipArr, int size)
+static void PrintArrayElement(char * ipArr, int size)
 {
     printf("{");
     for (int i = 0; i < size; i++)
@@ -61,7 +61,7 @@ void PrintArrayElement(char * ipArr, int size)
 }
 
 
-void RemoveAndArrageElement(char * inputArr, int pos, int size)
+static void RemoveAndArrageElement(char * inputArr, int pos, int size)
 {
     int temp = pos;
     bool flag;
@@ -77,7 +77,7 @@ void RemoveAndArrageElement(char * inputArr, int pos, int size)
         inputArr[temp] = 0;
 }
 
-void InsertAndArrageElement(char * inputArr, char ts, int pos, int size)
+static void InsertAndArrageElement(char * inputArr, char ts, int pos, int size)
 {
     int temp = size;
     bool flag;
@@ -93,7 +93,7 @@ void InsertAndArrageElement(char * inputArr, char ts, int pos, int size)
 }
 
 
-void printSubsetHelper( char * arr, char * chosen, int size )
+static void printSubsetHelper( char * arr, char * chosen, int size )
 {    
     if (arr[0]==0)
     {
