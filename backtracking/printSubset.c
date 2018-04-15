@@ -10,7 +10,7 @@ int main()
 {
     char MainArr[5] = {'M', 'Y', 'Z', 'W', 'X'};
 
-    printSubset(MainArr, 5);
+    PrintSubset(MainArr, 5);
 
     return 0;
 }
