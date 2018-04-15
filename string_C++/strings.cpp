@@ -2,6 +2,7 @@
 #include <fstream>
 
 #include "strings.h"
+#include <string>
 
 using namespace std;
 
