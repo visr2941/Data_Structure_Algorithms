@@ -91,6 +91,26 @@ void reverse_list(Node ** head)
 	*head = temp2;
 }
 
+void reverse_recursive(Node ** head)
+{
+    Node * temp1 = *head;
+	Node * temp2 = *head;
+    
+    if(temp2->nxtptr == NULL)
+        return;
+    
+    temp2 = temp1->nxtptr;
+    
+    reverse_recursive(&temp2);
+    
+    temp1->nxtptr->nxtptr = temp1;
+	temp1->nxtptr = NULL;
+	
+	*head = temp2;
+	
+	return;
+}
+
 main()
 {
     	Node ** head = (Node **)malloc(sizeof(*head));
@@ -102,9 +122,12 @@ main()
 	insert_node(head, 6, -800);
 	print_list(head);
 	delete_node(head, 9);
-	delete_node(head, 2);
-	delete_node(head, 4);
-	delete_node(head, 10);
+	//delete_node(head, 2);
+	//delete_node(head, 4);
+	//delete_node(head, 10);
+	print_list(head);
 	reverse_list(head);
+	print_list(head);
+	reverse_recursive(head);
 	print_list(head);
 }
