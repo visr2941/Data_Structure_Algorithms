@@ -104,11 +104,11 @@ void reverse_recursive(Node ** head)
     reverse_recursive(&temp2);
     
     temp1->nxtptr->nxtptr = temp1;
-	temp1->nxtptr = NULL;
+    temp1->nxtptr = NULL;
 	
-	*head = temp2;
+    *head = temp2;
 	
-	return;
+    return;
 }
 
 main()
@@ -124,7 +124,7 @@ main()
 	delete_node(head, 9);
 	//delete_node(head, 2);
 	//delete_node(head, 4);
-	//delete_node(head, 10);
+	delete_node(head, 10);
 	print_list(head);
 	reverse_list(head);
 	print_list(head);
