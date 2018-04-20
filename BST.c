@@ -143,6 +143,39 @@ void initialize_bst(bst_node** root, int data)
     return rtnPtr;
 }*/
 
+int FindHeightBST(bst_node ** root)
+{
+    if(*root == NULL)
+        return -1;
+    else
+    {
+        return (FindHeightBST(&(*root)->left) > FindHeightBST(&(*root)->right) ? \
+                    FindHeightBST(&(*root)->left)+1:FindHeightBST(&(*root)->right)+1);
+    }
+}
+
+int FindDepthNode(bst_node ** root, int data)
+{
+    if(*root == NULL || root == NULL || search(root, data)==NULL)
+        return -1;
+    else if((*root)->data == data)
+        return 0;
+    else
+    {
+        return ((*root)->data > data ? \
+                    FindDepthNode(&(*root)->left, data)+1:FindDepthNode(&(*root)->right, data)+1);
+    }
+}
+
+int SizeOfBST(bst_node ** root)
+{
+    if(*root == NULL || root == NULL)
+        return 0;
+    
+    return (SizeOfBST(&(*root)->left) + SizeOfBST(&(*root)->right) + 1);
+}
+
+
 void PrintInOrder(bst_node ** root)
 {
     if(*root == NULL || root == NULL)
@@ -173,6 +206,10 @@ void PrintPreOrder(bst_node ** root)
 int main()
 {
     bst_node* root = NULL;
+    printf("depth of given node is %d\n", FindDepthNode(&root, 17));
+    
+    printf("Size of BST is %d\n", SizeOfBST(&root));
+
    
     initialize_bst(&root, 10);
     //insert(&root, 10);
@@ -180,12 +217,19 @@ int main()
     insert(&root, 15);
     insert(&root, 11);
     insert(&root, 8);
+    //printf("Size of BST is %d\n", SizeOfBST(&root));
     insert(&root, 9);
     insert(&root, 18);
     insert(&root, 17);
     
     PrintInOrder(&root);
     printf("\n");
+    
+    printf("height of BST is %d\n", FindHeightBST(&root));
+    
+    printf("depth of given node is %d\n", FindDepthNode(&root, 117));
+    
+    printf("Size of BST is %d\n", SizeOfBST(&root));
     
     bst_node** searchfound = search(&root, 15);
     if(searchfound) 
@@ -201,14 +245,18 @@ int main()
     bst_node ** lowest = findLowest(&root);
     printf("minimum value in list is %d\n", (*lowest)->data);
     
-    delete (&root, 15);
-    delete (&root, 7);
+    delete (&root, 17);
+    delete (&root, 9);
     
     PrintInOrder(&root);
     printf("\n");
     
+    printf("height of BST is %d\n", FindHeightBST(&root));
+    
     lowest = findLowest(&root);
     printf("minimum value in list is %d\n", (*lowest)->data);
+    
+    printf("Size of BST is %d\n", SizeOfBST(&root));
     
     searchfound = search(&root, 10);
     
