@@ -53,6 +53,7 @@ bst_node ** findLowest(bst_node ** root)
     // passing invalid pointers or BST empty
     if(*root == NULL || root == NULL)
         return NULL;
+    
     // find the lowest recursively
     else if((*root)->left != NULL)
         root = findLowest(&((*root)->left));
@@ -63,10 +64,11 @@ bst_node ** findLowest(bst_node ** root)
 /* function to delete the node with the given data */
 void delete (bst_node ** root, int data)
 {
+    bst_node * temp = NULL;
     // passing invalid pointers or BST empty
     if(root == NULL || *root == NULL)
         return;
-    
+
     // look for the node to be deleted
     bst_node ** nodeDeleted = search(root, data);
     
@@ -83,13 +85,15 @@ void delete (bst_node ** root, int data)
     */
     else if ((*nodeDeleted)->left == NULL)
     {
+        temp = (*nodeDeleted)-> right;
         free(*nodeDeleted);
-        *nodeDeleted = (*nodeDeleted)-> right;
+        *nodeDeleted = temp;
     }
     else if ((*nodeDeleted)->right == NULL)
     {
+        temp = (*nodeDeleted)-> left;
         free(*nodeDeleted);
-        *nodeDeleted = (*nodeDeleted)-> left;
+        *nodeDeleted = temp;
     }
     /* if the node to be deleted has both right and left sub-tree,
     go to the right sub-tree and find the lowest value node. Replace
@@ -97,9 +101,9 @@ void delete (bst_node ** root, int data)
     the lowest value node */
     else
     {
-       bst_node ** temp = findLowest(&((*nodeDeleted)->right));
-       (*nodeDeleted)->data = (*temp)->data;
-       delete (temp, (*temp)->data);
+       bst_node ** MinValNode = findLowest(&((*nodeDeleted)->right));
+       (*nodeDeleted)->data = (*MinValNode)->data;
+       delete (MinValNode, (*MinValNode)->data);
     }
         
 }
@@ -107,7 +111,7 @@ void delete (bst_node ** root, int data)
 /* function to initialize a BST */
 void initialize_bst(bst_node** root, int data)
 {
-    if(*root != NULL)
+    if(*root == NULL)
     {
         *root = (bst_node *) malloc(sizeof(bst_node));
         (*root)->data = data;
@@ -115,7 +119,7 @@ void initialize_bst(bst_node** root, int data)
         (*root)->right = NULL;
     }
     else
-        printf("BST is already initialized");
+        printf("BST is already initialized\n");
 }
 
 /* search code without recursion */
@@ -139,12 +143,39 @@ void initialize_bst(bst_node** root, int data)
     return rtnPtr;
 }*/
 
+void PrintInOrder(bst_node ** root)
+{
+    if(*root == NULL || root == NULL)
+        return;
+    PrintInOrder(&(*root)->left);
+    printf("%d ", (*root)->data);
+    PrintInOrder(&(*root)->right);
+}
+
+void PrintPostOrder(bst_node ** root)
+{
+    if(*root == NULL || root == NULL)
+        return;
+    PrintPostOrder(&(*root)->left);
+    PrintPostOrder(&(*root)->right);
+    printf("%d ", (*root)->data);
+}
+
+void PrintPreOrder(bst_node ** root)
+{
+    if(*root == NULL || root == NULL)
+        return;
+    printf("%d ", (*root)->data);
+    PrintPreOrder(&(*root)->left);
+    PrintPreOrder(&(*root)->right);
+}
+
 int main()
 {
     bst_node* root = NULL;
    
     initialize_bst(&root, 10);
-    insert(&root, 10);
+    //insert(&root, 10);
     insert(&root, 7);
     insert(&root, 15);
     insert(&root, 11);
@@ -153,6 +184,9 @@ int main()
     insert(&root, 18);
     insert(&root, 17);
     
+    PrintInOrder(&root);
+    printf("\n");
+    
     bst_node** searchfound = search(&root, 15);
     if(searchfound) 
         if(*searchfound) {
@@ -160,13 +194,23 @@ int main()
             printf("Hello World %d\n", (*searchfound)->right->data);   
         }
         else
-            printf("Not found");
+            printf("Not found\n");
     else
-        printf("Not found");  
-        
-    delete (&root, 15);
+        printf("Not found\n");  
     
-    searchfound = search(&root, 100);
+    bst_node ** lowest = findLowest(&root);
+    printf("minimum value in list is %d\n", (*lowest)->data);
+    
+    delete (&root, 15);
+    delete (&root, 7);
+    
+    PrintInOrder(&root);
+    printf("\n");
+    
+    lowest = findLowest(&root);
+    printf("minimum value in list is %d\n", (*lowest)->data);
+    
+    searchfound = search(&root, 10);
     
     if(searchfound) 
         if(*searchfound) {
@@ -174,9 +218,9 @@ int main()
             printf("Hello World %d\n", (*searchfound)->right->data);   
         }
         else
-            printf("Not found");
+            printf("Not found\n");
     else
-        printf("Not found");      
+        printf("Not found\n");      
     
 
     return 0;
