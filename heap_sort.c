@@ -49,7 +49,7 @@ void Heapify(int * array, int parent, int size)
 }
 
 
-void MakeHeap_Max(int * array, int size)
+void MakeMaxHeap(int * array, int size)
 {
     for(int i = (size/2)-1; i >= 0; i=i-1)
     {
@@ -58,7 +58,7 @@ void MakeHeap_Max(int * array, int size)
 }
 
 
-void HeapSort_Max(int * array, int size)
+void HeapSortMax(int * array, int size)
 {
     int temp;
     int sizetemp = size;
@@ -78,9 +78,9 @@ int main()
     int arr[12] = {5, 12, 64, 1, 37, 90, 23, 80, 34, 56, 24, -12};
     //int arr[3] = {5, 12, 3};
     PrintArray(arr, 12);
-    MakeHeap_Max(arr, 12);
+    MakeMaxHeap(arr, 12);
     PrintArray(arr, 12);
-    HeapSort_Max(arr, 12);
+    HeapSortMax(arr, 12);
     PrintArray(arr, 12);
     return 0;
 }
