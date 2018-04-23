@@ -62,13 +62,17 @@ void HeapSortMax(int * array, int size)
 {
     int temp;
     int sizetemp = size;
-    for(int i = 0; i < sizetemp; i++)
+
+    if(size == 0)
+        return;
+    else
     {
         temp = array[0];
         array[0] = array[size-1];
         array[size-1] = temp;
         size = size -1;
         Heapify(array, 0, size);
+        HeapSortMax(array, size);
     }
 }
 
