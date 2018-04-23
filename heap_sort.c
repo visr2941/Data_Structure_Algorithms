@@ -38,14 +38,11 @@ void Heapify(int * array, int parent, int size)
             temp = array[largest];
             array[largest] = array[parent];
             array[parent] = temp;
+            PrintArray(array, 12);
+            Heapify(array, largest, size);
         }
-        else
-            largest++;
     }
-    else 
-        largest++;
-
-    Heapify(array, largest, size);
+    
 }
 
 
