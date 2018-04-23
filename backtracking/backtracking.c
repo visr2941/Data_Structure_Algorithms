@@ -111,8 +111,7 @@ static void printSubsetHelper( char * arr, char * chosen, int size )
         
         printSubsetHelper(arr, chosen, size-1);
         
-        chosen[chsCnt] = ts;
-        chsCnt++;
+        chosen[chsCnt++] = ts;
 
         printSubsetHelper(arr, chosen, size);
 
