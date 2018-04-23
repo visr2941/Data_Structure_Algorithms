@@ -102,7 +102,7 @@ static void printSubsetHelper( char * arr, char * chosen, int size )
     
     if (arr[0]==0)
     {
-        PrintArrayElement(chosen, size);
+        PrintArrayElement(chosen, chsCnt);
     }
     else
     {
@@ -116,8 +116,7 @@ static void printSubsetHelper( char * arr, char * chosen, int size )
 
         printSubsetHelper(arr, chosen, size);
 
-        InsertAndArrageElement(arr, ts, 0, size+1);
-        size = size+ 1;
+        InsertAndArrageElement(arr, ts, 0, size);
 
         RemoveAndArrageElement(chosen, chsCnt-1, size);
         chsCnt--;
