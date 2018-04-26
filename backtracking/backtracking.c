@@ -14,6 +14,7 @@ static void RemoveAndArrageElement(char * inputArr, int pos, int size);
 static void PrintArrayElement(char * ipArr, int size);
 
 static void PrintAllBinaryHelper(char * str, int digit);
+static void PrintPermutationHelper(char * str, char * ts, int size); 
 
 
 /******************************************************************************************/
@@ -40,6 +41,12 @@ void PrintAllBinary(int digit)
     char str[digit+1];
     str[digit] = '\0';
     PrintAllBinaryHelper(str, digit);
+}
+
+void PrintPermutation(char * str, int size)
+{
+    char ts[size+1];
+    PrintPermutationHelper(str, ts, size);
 }
 
 
@@ -136,6 +143,32 @@ static void PrintAllBinaryHelper(char * str, int digit)
         PrintAllBinaryHelper(str, digit-1);
         str[cnt-digit] = '1';    
         PrintAllBinaryHelper(str, digit-1);   
+    }
+}
+
+static void PrintPermutationHelper(char * str, char * ts, int size)
+{
+    static int chCnt = 0;
+
+    if(size==0)
+    {
+        printf("%s\n", ts);
+    }
+    else 
+    {
+        for(int i = 0; i < size; i++)
+        {
+            //choose
+            ts[chCnt++] = str[i];
+            RemoveAndArrageElement(str, i, size);
+            
+            //explore
+            PrintPermutationHelper(str, ts, size-1);
+            
+            //un-choose
+            InsertAndArrageElement(str, ts[--chCnt], i, size);
+            RemoveAndArrageElement(ts, chCnt, size);
+        }
     }
 }
 
