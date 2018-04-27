@@ -22,7 +22,7 @@ int GetParentIndex(int child)
 }
 
 
-void Heapify(int * array, int parent, int size)
+void HeapifyDownMax(int * array, int parent, int size)
 {
     int temp, largest = parent;
     
@@ -44,7 +44,7 @@ void Heapify(int * array, int parent, int size)
             temp = array[largest];
             array[largest] = array[parent];
             array[parent] = temp;
-            Heapify(array, largest, size);
+            HeapifyDownMax(array, largest, size);
         }
     }
 }
@@ -54,7 +54,7 @@ void MakeMaxHeap(int * array, int size)
 {
     for(int i = (size/2)-1; i >= 0; i=i-1)
     {
-        Heapify(array, i, size);
+        HeapifyDownMax(array, i, size);
     }
 }
 
@@ -99,7 +99,7 @@ void HeapSortMax(int * array, int size)
         array[0] = array[size-1];
         array[size-1] = temp;
         size = size -1;
-        Heapify(array, 0, size);
+        HeapifyDownMax(array, 0, size);
         HeapSortMax(array, size);
     }
 }
@@ -146,5 +146,7 @@ int main()
     //HeapSortMax(arr, heapsize);
     PrintArray(arr, heapsize);
     printf("present %d\n", SearchElementInHeapMax(arr, -60, 0));
+    HeapSortMax(arr, heapsize);
+    PrintArray(arr, heapsize);
     return 0;
 }
