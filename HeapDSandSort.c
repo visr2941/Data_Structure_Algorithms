@@ -77,8 +77,8 @@ void HeapifyUpMax(int * array, int child, int size)
             HeapifyUpMax(array, parent, size);
         }
     }
-    
 }
+
 
 void InsertElementInHeapMax(int * arr, int element)
 {
