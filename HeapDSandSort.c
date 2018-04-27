@@ -21,7 +21,8 @@ int GetParentIndex(int child)
     return(child-1)/2;
 }
 
-void HeapifyDownMax(int * array, int parent, int size)
+
+void Heapify(int * array, int parent, int size)
 {
     int temp, largest = parent;
     
@@ -43,7 +44,7 @@ void HeapifyDownMax(int * array, int parent, int size)
             temp = array[largest];
             array[largest] = array[parent];
             array[parent] = temp;
-            HeapifyDownMax(array, largest, size);
+            Heapify(array, largest, size);
         }
     }
 }
@@ -53,7 +54,7 @@ void MakeMaxHeap(int * array, int size)
 {
     for(int i = (size/2)-1; i >= 0; i=i-1)
     {
-        HeapifyDownMax(array, i, size);
+        Heapify(array, i, size);
     }
 }
 
@@ -61,6 +62,7 @@ void MakeMaxHeap(int * array, int size)
 void HeapifyUpMax(int * array, int child, int size)
 {
     int temp;
+    
     int parent = GetParentIndex(child);
 
     if(parent < 0)
@@ -75,6 +77,7 @@ void HeapifyUpMax(int * array, int child, int size)
             HeapifyUpMax(array, parent, size);
         }
     }
+    
 }
 
 void InsertElementInHeapMax(int * arr, int element)
@@ -96,9 +99,29 @@ void HeapSortMax(int * array, int size)
         array[0] = array[size-1];
         array[size-1] = temp;
         size = size -1;
-        HeapifyDownMax(array, 0, size);
+        Heapify(array, 0, size);
         HeapSortMax(array, size);
     }
+}
+
+int SearchElementInHeapMax(int * arr, int data, int index)
+{
+    if(arr > heap+heapsize-1)
+        return 0;
+    else if (arr[0] < data)
+        return 0;
+    else if(arr[0] == data)
+        return 1;
+    
+    int i1 = 2*index+1;
+    int i2 = 2*index+2;
+    
+    if(arr[i1] > data && arr[i2] < data)
+        return SearchElementInHeapMax(arr+i1, data, i1);
+    else if (arr[i2] > data && arr[i1] < data)
+        return SearchElementInHeapMax(arr+i2, data, i2);
+    else 
+        return (SearchElementInHeapMax(arr+i1-index, data, i1)||SearchElementInHeapMax(arr+i2-index, data, i2));
 }
 
 
@@ -110,16 +133,18 @@ int main()
     InsertElementInHeapMax(arr, 4);
     InsertElementInHeapMax(arr, 14);
     InsertElementInHeapMax(arr, 34);
-    InsertElementInHeapMax(arr, 63);
+    //InsertElementInHeapMax(arr, 63);
     InsertElementInHeapMax(arr, 632);
     InsertElementInHeapMax(arr, 630);
-    PrintArray(arr, heapsize);
-    arr[4] = arr[heapsize-1];
-    HeapifyDownMax(arr, 0, --heapsize);
+    InsertElementInHeapMax(arr, 69);
+    InsertElementInHeapMax(arr, -60);
+    InsertElementInHeapMax(arr, -32);
+    InsertElementInHeapMax(arr, 30);
     PrintArray(arr, heapsize);
     //MakeMaxHeap(arr, 12);
     //PrintArray(arr, 12);
-    HeapSortMax(arr, heapsize);
+    //HeapSortMax(arr, heapsize);
     PrintArray(arr, heapsize);
+    printf("present %d\n", SearchElementInHeapMax(arr, -60, 0));
     return 0;
 }
