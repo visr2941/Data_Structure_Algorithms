@@ -103,7 +103,8 @@ void delete (bst_node ** root, int data)
     {
        bst_node ** MinValNode = findLowest(&((*nodeDeleted)->right));
        (*nodeDeleted)->data = (*MinValNode)->data;
-       delete (MinValNode, (*MinValNode)->data);
+       free(*MinValNode);
+       *MinValNode = NULL;
     }
         
 }
@@ -149,8 +150,9 @@ int FindHeightBST(bst_node ** root)
         return -1;
     else
     {
-        return (FindHeightBST(&(*root)->left) > FindHeightBST(&(*root)->right) ? \
-                    FindHeightBST(&(*root)->left)+1:FindHeightBST(&(*root)->right)+1);
+        int l1 = FindHeightBST(&(*root)->left);
+        int l2 = FindHeightBST(&(*root)->right);
+        return (l1 > l2 ? l1 + 1 : l2 + 1);
     }
 }
 
@@ -222,12 +224,17 @@ int main()
     insert(&root, 18);
     insert(&root, 17);
     
+    printf("\nInorder - ");
     PrintInOrder(&root);
-    printf("\n");
+    printf("\nPre-Order - ");
+    PrintPreOrder(&root);
+    printf("\nPost-Order - ");
+    PrintPostOrder(&root);
+    printf("\n\n");
     
     printf("height of BST is %d\n", FindHeightBST(&root));
     
-    printf("depth of given node is %d\n", FindDepthNode(&root, 117));
+    printf("depth of given node is %d\n", FindDepthNode(&root, 17));
     
     printf("Size of BST is %d\n", SizeOfBST(&root));
     
@@ -245,7 +252,7 @@ int main()
     bst_node ** lowest = findLowest(&root);
     printf("minimum value in list is %d\n", (*lowest)->data);
     
-    delete (&root, 17);
+    delete (&root, 15);
     delete (&root, 9);
     
     PrintInOrder(&root);
