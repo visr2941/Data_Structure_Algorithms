@@ -109,6 +109,38 @@ static void PrintAllBinaryHelper(char * str, int digit)
     }
 }
 
+static void RemoveAndArrageElement(char * inputArr, int pos, int size)
+{
+    int temp = pos;
+    bool flag;
+    
+    while(temp < size)
+    {
+        //printf("check\n");
+        inputArr[temp] = inputArr[temp+1];
+        temp++;
+        flag = 1;
+    }
+    if(flag)
+        inputArr[temp] = 0;
+}
+
+static void InsertAndArrageElement(char * inputArr, char ts, int pos, int size)
+{
+    int temp = size;
+    bool flag;
+    
+    while(temp > pos)
+    {
+        inputArr[temp] = inputArr[temp-1];
+        temp--;
+        flag = 1;
+    }
+    
+    inputArr[temp] = ts;    
+}
+
+
 static void PrintPermutationHelper(char * str, char * ts, int size)
 {
     static int chCnt = 0;
