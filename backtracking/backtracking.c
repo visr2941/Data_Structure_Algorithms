@@ -70,24 +70,6 @@ static void PrintArrayElement(char * ipArr, int size)
 }
 
 
-static void RemoveAndArrageElement(char * inputArr, int pos, int size)
-{
-    int temp = pos;
-    bool flag;
-    
-    while(temp < size)
-    {
-        //printf("check\n");
-        inputArr[temp] = inputArr[temp+1];
-        temp++;
-        flag = 1;
-    }
-    if(flag)
-        inputArr[temp] = 0;
-}
-
-
-
 static void printSubsetHelper( char * arr, char * chosen, int ind, int size )
 {    
     
@@ -105,11 +87,11 @@ static void printSubsetHelper( char * arr, char * chosen, int ind, int size )
 
         printSubsetHelper(arr, chosen, ind+1, size);
 
-        RemoveAndArrageElement(chosen, chsCnt-1, size);
         chsCnt--;
     }
 
 }
+
 
 
 static void PrintAllBinaryHelper(char * str, int digit)
