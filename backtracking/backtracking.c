@@ -14,7 +14,7 @@ static void RemoveAndArrageElement(char * inputArr, int pos, int size);
 static void PrintArrayElement(char * ipArr, int size);
 
 static void PrintAllBinaryHelper(char * str, int digit);
-static void PrintPermutationHelper(char * str, char * ts, int size); 
+static void PrintPermutationHelper(char * str, char * ts, int ind, int size); 
 
 
 /******************************************************************************************/
@@ -32,7 +32,7 @@ void PrintSubset(char * MainArr, int size)
     for(int i = 0; i < size; i++)
         arrMod[i] = MainArr[i];
         
-    printSubsetHelper(arrMod, chosenNew, size);
+    printSubsetHelper(arrMod, chosenNew, 0, size);
     
 }
 
@@ -86,43 +86,24 @@ static void RemoveAndArrageElement(char * inputArr, int pos, int size)
         inputArr[temp] = 0;
 }
 
-static void InsertAndArrageElement(char * inputArr, char ts, int pos, int size)
-{
-    int temp = size;
-    bool flag;
-    
-    while(temp > pos)
-    {
-        inputArr[temp] = inputArr[temp-1];
-        temp--;
-        flag = 1;
-    }
-    
-    inputArr[temp] = ts;    
-}
 
 
-static void printSubsetHelper( char * arr, char * chosen, int size )
+static void printSubsetHelper( char * arr, char * chosen, int ind, int size )
 {    
     
     static int chsCnt = 0;
     
-    if (arr[0]==0)
+    if (ind==size)
     {
         PrintArrayElement(chosen, chsCnt);
     }
     else
     {
-        char ts = arr[0];
-        RemoveAndArrageElement(arr, 0, size);
+        printSubsetHelper(arr, chosen, ind+1, size);
         
-        printSubsetHelper(arr, chosen, size-1);
-        
-        chosen[chsCnt++] = ts;
+        chosen[chsCnt++] = arr[ind];
 
-        printSubsetHelper(arr, chosen, size);
-
-        InsertAndArrageElement(arr, ts, 0, size);
+        printSubsetHelper(arr, chosen, ind+1, size);
 
         RemoveAndArrageElement(chosen, chsCnt-1, size);
         chsCnt--;
