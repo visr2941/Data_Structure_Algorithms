@@ -158,8 +158,8 @@ int FindHeightBST(bst_node ** root)
 
 int FindDepthNode(bst_node ** root, int data)
 {
-    if(*root == NULL || root == NULL || search(root, data)==NULL)
-        return -1;
+    if(*root == NULL || root == NULL)
+        return -2;
     else if((*root)->data == data)
         return 0;
     else
