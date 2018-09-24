@@ -111,6 +111,44 @@ void reverse_recursive(Node ** head)
     return;
 }
 
+/* list pointed by a and b are already sorted - merging the two 
+** list in a single sorted list */
+struct Node* SortedMerge(struct Node* a, struct Node* b) 
+{ 
+    struct Node * returnNode; 
+    struct Node ** refNode = &returnNode; 
+
+    while (1) 
+    { 
+        if (a == NULL) 
+        { 
+            /* if either list runs out, use the 
+            other list */
+            *refNode = b; 
+            break; 
+        } 
+        else if (b == NULL) 
+        { 
+            *refNode = a; 
+            break; 
+        } 
+        if (a->data <= b->data) 
+        {
+            *refNode = a;
+            a = a->nxtptr;
+        } 
+        else
+        {
+		    *refNode = b;
+            b = b->nxtptr; 
+        }
+
+        refNode = &((*refNode)->nxtptr);
+    } 
+    
+    return returnNode; 
+}
+
 main()
 {
     	Node ** head = (Node **)malloc(sizeof(*head));
