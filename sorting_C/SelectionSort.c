@@ -20,7 +20,7 @@ void SelectionSort(int arr[], int n)
         swapTemp = arr[i];
         arr[i] = arr[min];
         arr[min] = swapTemp;
-	}
+    }
 }
 
 /* Function to print an array */
