@@ -78,36 +78,36 @@ int8_t delete_node(Node ** head, uint8_t pos)
 
 void reverse_list(Node ** head)
 {
-	Node * temp = *head;
-	Node * temp1 = NULL;
-	Node * temp2 = NULL;
-	while((temp)!=NULL)
+	Node * prev = NULL;
+	Node * curr = *head;
+	Node * fut = curr->nxtptr;
+	
+	while(fut!=NULL)
 	{
-		temp1 = temp -> nxtptr;
-		temp -> nxtptr = temp2;
-		temp2=temp;
-		temp = temp1;
+		curr->nxtptr = prev;
+		prev = curr;
+		curr = fut;
+		fut = curr->nxtptr;
 	}
-	*head = temp2;
+	curr->nxtptr = prev;
+	*head = curr;
 }
 
 void reverse_recursive(Node ** head)
 {
-    Node * temp1 = *head;
-	Node * temp2 = *head;
-    
-    if(temp2->nxtptr == NULL)
+    if((*head)->nxtptr == NULL)
         return;
     
-    temp2 = temp1->nxtptr;
+    Node * prev = *head;
+    Node * curr = (*head)->nxtptr;
     
-    reverse_recursive(&temp2);
+    reverse_recursive(&curr);
     
-    temp1->nxtptr->nxtptr = temp1;
-    temp1->nxtptr = NULL;
+    prev->nxtptr->nxtptr = prev;
+    prev->nxtptr = NULL;
 	
-    *head = temp2;
-	
+    *head = curr;
+
     return;
 }
 
