@@ -149,6 +149,54 @@ struct Node* SortedMerge(struct Node* a, struct Node* b)
     return returnNode; 
 }
 
+void reverse_recursive(listnode ** B)
+{
+    if((*B)->next == NULL)
+        return;
+    listnode * B_temp1 = *B;
+    listnode * B_temp2 = (*B)->next;
+    
+    reverse_recursive(&B_temp2);
+    
+    B_temp1->next->next = B_temp1;
+    B_temp1->next = NULL;
+    
+    *B = B_temp2;
+    
+    return;
+}
+ 
+int lPalin(listnode* A) {
+    listnode * temp1 = A;
+    listnode * temp2 = A;
+    listnode * temp3 = A;
+    
+    while(temp2->next != NULL)
+    {
+        temp1 = temp1->next;
+        temp2 = temp2->next;
+        if(temp2->next != NULL)
+            temp2 = temp2->next;
+        else
+            break;
+    }
+    
+    reverse_recursive(&temp1);
+
+    while(temp1 != NULL)
+    {
+        if(temp3->val != temp1->val)
+            return 0;
+        else
+        {
+            temp3 = temp3->next;
+            temp1 = temp1->next;
+        }
+    }
+    return 1;
+}
+
+
 main()
 {
     	Node ** head = (Node **)malloc(sizeof(*head));
