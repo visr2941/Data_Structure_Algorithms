@@ -104,26 +104,6 @@ void HeapSortMax(int * array, int size)
     }
 }
 
-int SearchElementInHeapMax(int * arr, int data, int index)
-{
-    if(arr > heap+heapsize-1)
-        return 0;
-    else if (arr[0] < data)
-        return 0;
-    else if(arr[0] == data)
-        return 1;
-    
-    int i1 = 2*index+1;
-    int i2 = 2*index+2;
-    
-    if(arr[i1] > data && arr[i2] < data)
-        return SearchElementInHeapMax(arr+i1, data, i1);
-    else if (arr[i2] > data && arr[i1] < data)
-        return SearchElementInHeapMax(arr+i2, data, i2);
-    else 
-        return (SearchElementInHeapMax(arr+i1-index, data, i1)||SearchElementInHeapMax(arr+i2-index, data, i2));
-}
-
 
 int main()
 {
@@ -145,7 +125,7 @@ int main()
     //PrintArray(arr, 12);
     //HeapSortMax(arr, heapsize);
     PrintArray(arr, heapsize);
-    printf("present %d\n", SearchElementInHeapMax(arr, -60, 0));
+    //printf("present %d\n", SearchElementInHeapMax(arr, -60, 0));
     HeapSortMax(arr, heapsize);
     PrintArray(arr, heapsize);
     return 0;
