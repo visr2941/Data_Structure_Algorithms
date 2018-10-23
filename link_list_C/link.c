@@ -149,23 +149,7 @@ struct Node* SortedMerge(struct Node* a, struct Node* b)
     return returnNode; 
 }
 
-void reverse_recursive(listnode ** B)
-{
-    if((*B)->next == NULL)
-        return;
-    listnode * B_temp1 = *B;
-    listnode * B_temp2 = (*B)->next;
-    
-    reverse_recursive(&B_temp2);
-    
-    B_temp1->next->next = B_temp1;
-    B_temp1->next = NULL;
-    
-    *B = B_temp2;
-    
-    return;
-}
- 
+
 int lPalin(listnode* A) {
     listnode * temp1 = A;
     listnode * temp2 = A;
