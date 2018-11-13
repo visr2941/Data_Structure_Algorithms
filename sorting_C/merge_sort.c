@@ -19,7 +19,7 @@ void merge(int left[], int right[], int n1, int n2, int A[])
     // Merge the temp arrays back into arr[l..r]
     while (i < n1 && j < n2)
     {
-        if (left[i] <= R[j])
+        if (left[i] <= right[j])
         {
             A[k] = left[i];
             i++;
