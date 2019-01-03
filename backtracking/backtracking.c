@@ -83,9 +83,11 @@ void printSubsetHelper(int * arr, int size, int * chosen, int cnt)
     
     //Explore rest of the array
     printSubsetHelper(arr+1, size-1, chosen, ++cnt);
+    //or printSubsetHelper(arr+1, size-1, chosen, cnt+1);
     
     //Unchoose (by --cnt) and explore rest of the array
     printSubsetHelper(arr+1, size-1, chosen, --cnt);
+    //or printSubsetHelper(arr+1, size-1, chosen, cnt);
 }
 
 
