@@ -39,7 +39,7 @@ void PrintAllBinary(int digit)
 {
     char str[digit+1];
     str[digit] = '\0';
-    PrintAllBinaryHelper(str, digit);
+    PrintAllBinaryHelper(str, digit, 0);
 }
 
 void PrintPermutation(char * str, int size)
@@ -89,19 +89,16 @@ void printSubsetHelper(int * arr, int size, int * chosen, int cnt)
 }
 
 
-static void PrintAllBinaryHelper(char * str, int digit)
+static void PrintAllBinaryHelper(char * str, int digit, int cnt)
 {
-    //static int cnt = digit;
-    static int cnt;
-    
     if(digit == 0)
         printf("%s\n", str);
     else
     {
-        str[cnt-digit] = '0';    
-        PrintAllBinaryHelper(str, digit-1);
-        str[cnt-digit] = '1';    
-        PrintAllBinaryHelper(str, digit-1);   
+        str[cnt] = '0';
+        PrintAllBinaryHelper(str, digit-1, cnt+1);
+        str[cnt] = '1';
+        PrintAllBinaryHelper(str, digit-1, cnt+1);
     }
 }
 
