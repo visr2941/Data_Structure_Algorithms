@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <malloc.h>
+#include <stdlib.h>
 
 /* structure of a bst node*/
 typedef struct bst_node { 
@@ -45,6 +45,8 @@ bst_node** search(bst_node ** root, int data)
         return search(&(*root)->left, data);
     else if((*root)->data < data)
        return search(&(*root)->right, data);
+
+    return NULL;
 }
 
 /* fucntion to find the lowest in BST */
@@ -57,8 +59,8 @@ bst_node ** findLowest(bst_node ** root)
     // find the lowest recursively
     else if((*root)->left != NULL)
         root = findLowest(&((*root)->left));
-    else
-        return root;
+
+    return root;
 }
 
 /* function to delete the node with the given data */
@@ -205,7 +207,7 @@ void PrintPreOrder(bst_node ** root)
     PrintPreOrder(&(*root)->right);
 }
 
-static int findHeight (Node * root)
+static int findHeight (bst_node * root)
 {
     if(root == NULL) return 0;
     
@@ -215,7 +217,7 @@ static int findHeight (Node * root)
     return (lh > rh ? lh+1 : rh+1);
 }
 
-static void levelOrderutil(Node *root, int level)
+static void levelOrderutil(bst_node *root, int level)
 {
     if(root == NULL) return;
     
@@ -227,11 +229,23 @@ static void levelOrderutil(Node *root, int level)
     }
 }
 
-void PrintLevelOrder(Node* root){
+void PrintLevelOrder(bst_node* root){
   //Write your code here
     int height = findHeight(root);
     for(int i = 1; i <= height; i++)
         levelOrderutil(root, i);
+}
+
+void kthSmallest(bst_node * root, int *retval, int *target)
+{
+    if(root==NULL) return;
+
+    kthSmallest(root->left,  retval, target);
+    (*target)--;
+    if(*target==0) *retval = root->data;
+    kthSmallest(root->right, retval, target);
+
+    return;
 }
 
 int main()
@@ -260,6 +274,13 @@ int main()
     printf("\nPost-Order - ");
     PrintPostOrder(&root);
     printf("\n\n");
+
+    int kthsmall, pos;
+    printf("Enter the position: "); 
+    scanf("%d", &pos);
+    kthSmallest(root, &kthsmall, &pos);
+    printf("kth smallest value %d\n", kthsmall);
+    
     
     printf("height of BST is %d\n", FindHeightBST(&root));
     

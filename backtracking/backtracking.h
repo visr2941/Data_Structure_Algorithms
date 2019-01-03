@@ -4,5 +4,6 @@
 
 void PrintSubset(char * MainArr, int size);
 void PrintAllBinary(int digit);
+void PrintPermutation(char * str, int size);
 
 #endif

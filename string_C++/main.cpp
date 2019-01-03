@@ -5,8 +5,9 @@
 
 using namespace std; 
 
-main()
+int main()
 {
     string str = "MARTY";
     PrintPermutation(str, 0);
+    return 0;
 }

@@ -8,13 +8,13 @@
  ************************** Local Functions **********************************************
 ******************************************************************************************/
 
-static void printSubsetHelper( char * arr, char * chosen, int size );
+static void printSubsetHelper( char * arr, char * chosen, int ind, int size );
 static void InsertAndArrageElement(char * inputArr, char ts, int pos, int size);
 static void RemoveAndArrageElement(char * inputArr, int pos, int size);
 static void PrintArrayElement(char * ipArr, int size);
 
 static void PrintAllBinaryHelper(char * str, int digit);
-static void PrintPermutationHelper(char * str, char * ts, int ind, int size); 
+static void PrintPermutationHelper(char * str, char * ts, int size, int * used);
 
 
 /******************************************************************************************/
@@ -27,12 +27,11 @@ static void PrintPermutationHelper(char * str, char * ts, int ind, int size);
 void PrintSubset(char * MainArr, int size)
 {
     char arrMod[size];
-    char chosenNew[size];
-    
     for(int i = 0; i < size; i++)
         arrMod[i] = MainArr[i];
         
-    printSubsetHelper(arrMod, chosenNew, 0, size);
+    int * chosen = (int *) malloc(n*sizeof(int));
+    printSubsetHelper(arrMod, size, chosen, 0);
     
 }
 
@@ -45,8 +44,10 @@ void PrintAllBinary(int digit)
 
 void PrintPermutation(char * str, int size)
 {
-    char ts[size+1];
-    PrintPermutationHelper(str, ts, size);
+    char ts[size];
+    int used[size];
+    for(int i = 0; i < size; i++) used[i] = 0;
+    PrintPermutationHelper(str, ts, size, used);
 }
 
 
@@ -69,34 +70,29 @@ static void PrintArrayElement(char * ipArr, int size)
         printf("\b\b}\n");
 }
 
-
-static void printSubsetHelper( char * arr, char * chosen, int ind, int size )
-{    
-    
-    static int chsCnt = 0;
-    
-    if (ind==size)
-    {
-        PrintArrayElement(chosen, chsCnt);
+void printSubsetHelper(int * arr, int size, int * chosen, int cnt)
+{
+    //base condition
+    if(size==0) {
+        PrintArrayElement(chosen, cnt);
+        return;
     }
-    else
-    {
-        printSubsetHelper(arr, chosen, ind+1, size);
-        
-        chosen[chsCnt++] = arr[ind];
-
-        printSubsetHelper(arr, chosen, ind+1, size);
-
-        chsCnt--;
-    }
-
+    
+    //choose
+    chosen[cnt] = arr[0];
+    
+    //Explore rest of the array
+    printSubsetHelper(arr+1, size-1, chosen, ++cnt);
+    
+    //Unchoose (by --cnt) and explore rest of the array
+    printSubsetHelper(arr+1, size-1, chosen, --cnt);
 }
-
 
 
 static void PrintAllBinaryHelper(char * str, int digit)
 {
-    static int cnt = digit;
+    //static int cnt = digit;
+    static int cnt;
     
     if(digit == 0)
         printf("%s\n", str);
@@ -109,60 +105,31 @@ static void PrintAllBinaryHelper(char * str, int digit)
     }
 }
 
-static void RemoveAndArrageElement(char * inputArr, int pos, int size)
-{
-    int temp = pos;
-    bool flag;
-    
-    while(temp < size)
-    {
-        //printf("check\n");
-        inputArr[temp] = inputArr[temp+1];
-        temp++;
-        flag = 1;
-    }
-    if(flag)
-        inputArr[temp] = 0;
-}
-
-static void InsertAndArrageElement(char * inputArr, char ts, int pos, int size)
-{
-    int temp = size;
-    bool flag;
-    
-    while(temp > pos)
-    {
-        inputArr[temp] = inputArr[temp-1];
-        temp--;
-        flag = 1;
-    }
-    
-    inputArr[temp] = ts;    
-}
-
-
-static void PrintPermutationHelper(char * str, char * ts, int size)
+static void PrintPermutationHelper(char * str, char * ts, int size, int * used)
 {
     static int chCnt = 0;
 
-    if(size==0)
+    if(size==chCnt)
     {
+        ts[chCnt] = 0;
         printf("%s\n", ts);
     }
     else 
     {
         for(int i = 0; i < size; i++)
         {
-            //choose
-            ts[chCnt++] = str[i];
-            RemoveAndArrageElement(str, i, size);
-            
-            //explore
-            PrintPermutationHelper(str, ts, size-1);
-            
-            //un-choose
-            InsertAndArrageElement(str, ts[--chCnt], i, size);
-            RemoveAndArrageElement(ts, chCnt, size);
+            if(used[i]==0) {
+                //choose
+                ts[chCnt++] = str[i];
+                used[i] = 1;
+                
+                //explore
+                PrintPermutationHelper(str, ts, size, used);
+                
+                //un-choose
+                used[i] = 0;
+                chCnt--;
+            }
         }
     }
 }
