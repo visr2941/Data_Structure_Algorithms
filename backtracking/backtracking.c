@@ -70,7 +70,7 @@ static void PrintArrayElement(char * ipArr, int size)
         printf("\b\b}\n");
 }
 
-void printSubsetHelper(int * arr, int size, int * chosen, int cnt)
+void printSubsetHelper(char * arr, int size, int * chosen, int cnt)
 {
     //base condition
     if(size==0) {
