@@ -1,0 +1,612 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CD168DA624AD88AE00FB60C7 /* KthSmallestUnionSortedArray.c in Sources */ = {isa = PBXBuildFile; fileRef = CD168DA524AD88AE00FB60C7 /* KthSmallestUnionSortedArray.c */; };
+		CD168DA924B00FC400FB60C7 /* MedianUnionSortedArrays.c in Sources */ = {isa = PBXBuildFile; fileRef = CD168DA824B00FC400FB60C7 /* MedianUnionSortedArrays.c */; };
+		CD168DAC24BC0F7E00FB60C7 /* KthSmallestUnsortedArray.c in Sources */ = {isa = PBXBuildFile; fileRef = CD168DAB24BC0F7E00FB60C7 /* KthSmallestUnsortedArray.c */; };
+		CD168DAF24BEDB0600FB60C7 /* FindMajorityBy3.c in Sources */ = {isa = PBXBuildFile; fileRef = CD168DAE24BEDB0600FB60C7 /* FindMajorityBy3.c */; };
+		CD168DB224C0292800FB60C7 /* TwoSum.c in Sources */ = {isa = PBXBuildFile; fileRef = CD168DB124C0292800FB60C7 /* TwoSum.c */; };
+		CD168DB524C0F48800FB60C7 /* RotateArray.c in Sources */ = {isa = PBXBuildFile; fileRef = CD168DB424C0F48800FB60C7 /* RotateArray.c */; };
+		CD168DB824C26C7400FB60C7 /* IsArrayMonotonic.c in Sources */ = {isa = PBXBuildFile; fileRef = CD168DB724C26C7400FB60C7 /* IsArrayMonotonic.c */; };
+		CD168DBB24C27DB800FB60C7 /* SquareOfSortedArrays.c in Sources */ = {isa = PBXBuildFile; fileRef = CD168DBA24C27DB800FB60C7 /* SquareOfSortedArrays.c */; };
+		CD168DBE24C6928700FB60C7 /* PermutationArray.c in Sources */ = {isa = PBXBuildFile; fileRef = CD168DBD24C6928700FB60C7 /* PermutationArray.c */; };
+		CD168DC124C790AD00FB60C7 /* SearchInRotatedArray.c in Sources */ = {isa = PBXBuildFile; fileRef = CD168DC024C790AD00FB60C7 /* SearchInRotatedArray.c */; };
+		CD168DC424C801B800FB60C7 /* FindPivotRotatedArray.c in Sources */ = {isa = PBXBuildFile; fileRef = CD168DC324C801B800FB60C7 /* FindPivotRotatedArray.c */; };
+		CD9F4C1A247E16040098A0F5 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = CD9F4C19247E16040098A0F5 /* main.c */; };
+		CD9F4C23247E16400098A0F5 /* MergeSortArray.c in Sources */ = {isa = PBXBuildFile; fileRef = CD9F4C22247E16400098A0F5 /* MergeSortArray.c */; };
+		CD9F4C30247E1BDE0098A0F5 /* MultiplyUsingBitManipulation.c in Sources */ = {isa = PBXBuildFile; fileRef = CD9F4C25247E1BDE0098A0F5 /* MultiplyUsingBitManipulation.c */; };
+		CD9F4C31247E1BDE0098A0F5 /* ReverseBits.c in Sources */ = {isa = PBXBuildFile; fileRef = CD9F4C26247E1BDE0098A0F5 /* ReverseBits.c */; };
+		CD9F4C32247E1BDE0098A0F5 /* SwapBits.c in Sources */ = {isa = PBXBuildFile; fileRef = CD9F4C29247E1BDE0098A0F5 /* SwapBits.c */; };
+		CD9F4C33247E1BDE0098A0F5 /* ClosestIntSameBitCount.c in Sources */ = {isa = PBXBuildFile; fileRef = CD9F4C2D247E1BDE0098A0F5 /* ClosestIntSameBitCount.c */; };
+		CD9F4C34247E1BDE0098A0F5 /* CalculatePower.c in Sources */ = {isa = PBXBuildFile; fileRef = CD9F4C2F247E1BDE0098A0F5 /* CalculatePower.c */; };
+		CD9F4C48247E1CB50098A0F5 /* ReverseLinkListRecursive.c in Sources */ = {isa = PBXBuildFile; fileRef = CD9F4C37247E1CB40098A0F5 /* ReverseLinkListRecursive.c */; };
+		CD9F4C49247E1CB50098A0F5 /* MergeSort.c in Sources */ = {isa = PBXBuildFile; fileRef = CD9F4C39247E1CB40098A0F5 /* MergeSort.c */; };
+		CD9F4C4A247E1CB50098A0F5 /* MergeSortedList.c in Sources */ = {isa = PBXBuildFile; fileRef = CD9F4C3A247E1CB40098A0F5 /* MergeSortedList.c */; };
+		CD9F4C4B247E1CB50098A0F5 /* AddTwoNumbers.c in Sources */ = {isa = PBXBuildFile; fileRef = CD9F4C3B247E1CB40098A0F5 /* AddTwoNumbers.c */; };
+		CD9F4C4C247E1CB50098A0F5 /* ReverseLinkList.c in Sources */ = {isa = PBXBuildFile; fileRef = CD9F4C3D247E1CB40098A0F5 /* ReverseLinkList.c */; };
+		CD9F4C4D247E1CB50098A0F5 /* LinkList.c in Sources */ = {isa = PBXBuildFile; fileRef = CD9F4C40247E1CB40098A0F5 /* LinkList.c */; };
+		CD9F4C4E247E1CB50098A0F5 /* IsPalindromeLinkList.c in Sources */ = {isa = PBXBuildFile; fileRef = CD9F4C42247E1CB40098A0F5 /* IsPalindromeLinkList.c */; };
+		CD9F4C4F247E1CB50098A0F5 /* RemoveDuplicate.c in Sources */ = {isa = PBXBuildFile; fileRef = CD9F4C44247E1CB50098A0F5 /* RemoveDuplicate.c */; };
+		CD9F4C54247E1D030098A0F5 /* ReverseDigits.c in Sources */ = {isa = PBXBuildFile; fileRef = CD9F4C52247E1D030098A0F5 /* ReverseDigits.c */; };
+		CD9F4C66247E1D390098A0F5 /* BinaryTree.c in Sources */ = {isa = PBXBuildFile; fileRef = CD9F4C56247E1D380098A0F5 /* BinaryTree.c */; };
+		CD9F4C67247E1D390098A0F5 /* ConstructFullBTLevelOrder.c in Sources */ = {isa = PBXBuildFile; fileRef = CD9F4C57247E1D380098A0F5 /* ConstructFullBTLevelOrder.c */; };
+		CD9F4C68247E1D390098A0F5 /* PrintInOrderBT.c in Sources */ = {isa = PBXBuildFile; fileRef = CD9F4C59247E1D380098A0F5 /* PrintInOrderBT.c */; };
+		CD9F4C69247E1D390098A0F5 /* ConstructUniqueBTPreInOrder.c in Sources */ = {isa = PBXBuildFile; fileRef = CD9F4C5A247E1D380098A0F5 /* ConstructUniqueBTPreInOrder.c */; };
+		CD9F4C6A247E1D390098A0F5 /* FindHeightBT.c in Sources */ = {isa = PBXBuildFile; fileRef = CD9F4C5B247E1D380098A0F5 /* FindHeightBT.c */; };
+		CD9F4C6B247E1D390098A0F5 /* PrintPreOrderBT.c in Sources */ = {isa = PBXBuildFile; fileRef = CD9F4C5D247E1D380098A0F5 /* PrintPreOrderBT.c */; };
+		CD9F4C6C247E1D390098A0F5 /* ConstructBalancedBTInOrder.c in Sources */ = {isa = PBXBuildFile; fileRef = CD9F4C5E247E1D380098A0F5 /* ConstructBalancedBTInOrder.c */; };
+		CD9F4C6D247E1D390098A0F5 /* PrintLevelOrderBT.c in Sources */ = {isa = PBXBuildFile; fileRef = CD9F4C65247E1D380098A0F5 /* PrintLevelOrderBT.c */; };
+		CD9F4C7C247E20400098A0F5 /* PrintArray.c in Sources */ = {isa = PBXBuildFile; fileRef = CD9F4C6F247E203F0098A0F5 /* PrintArray.c */; };
+		CD9F4C7D247E20400098A0F5 /* MinimumLengthSubArrayWithSum.c in Sources */ = {isa = PBXBuildFile; fileRef = CD9F4C72247E203F0098A0F5 /* MinimumLengthSubArrayWithSum.c */; };
+		CD9F4C7E247E20400098A0F5 /* FindMajority.c in Sources */ = {isa = PBXBuildFile; fileRef = CD9F4C73247E203F0098A0F5 /* FindMajority.c */; };
+		CD9F4C7F247E20400098A0F5 /* MaximumSumSubArray.c in Sources */ = {isa = PBXBuildFile; fileRef = CD9F4C75247E203F0098A0F5 /* MaximumSumSubArray.c */; };
+		CD9F4C81247E20400098A0F5 /* FirstDuplicateInArray.c in Sources */ = {isa = PBXBuildFile; fileRef = CD9F4C7A247E20400098A0F5 /* FirstDuplicateInArray.c */; };
+		CD9F4C8A247E21210098A0F5 /* Graph.c in Sources */ = {isa = PBXBuildFile; fileRef = CD9F4C85247E21210098A0F5 /* Graph.c */; };
+		CD9F4C8B247E21210098A0F5 /* BFS.c in Sources */ = {isa = PBXBuildFile; fileRef = CD9F4C86247E21210098A0F5 /* BFS.c */; };
+		CD9F4C8C247E21210098A0F5 /* DFS.c in Sources */ = {isa = PBXBuildFile; fileRef = CD9F4C87247E21210098A0F5 /* DFS.c */; };
+		CD9F4C90247E21960098A0F5 /* FindPathInMaze.c in Sources */ = {isa = PBXBuildFile; fileRef = CD9F4C8F247E21960098A0F5 /* FindPathInMaze.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CD9F4C14247E16040098A0F5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		CD168DA424AD88AE00FB60C7 /* KthSmallestUnionSortedArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KthSmallestUnionSortedArray.h; sourceTree = "<group>"; };
+		CD168DA524AD88AE00FB60C7 /* KthSmallestUnionSortedArray.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = KthSmallestUnionSortedArray.c; sourceTree = "<group>"; };
+		CD168DA724B00FC400FB60C7 /* MedianUnionSortedArrays.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MedianUnionSortedArrays.h; sourceTree = "<group>"; };
+		CD168DA824B00FC400FB60C7 /* MedianUnionSortedArrays.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = MedianUnionSortedArrays.c; sourceTree = "<group>"; };
+		CD168DAA24BC0F7E00FB60C7 /* KthSmallestUnsortedArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KthSmallestUnsortedArray.h; sourceTree = "<group>"; };
+		CD168DAB24BC0F7E00FB60C7 /* KthSmallestUnsortedArray.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = KthSmallestUnsortedArray.c; sourceTree = "<group>"; };
+		CD168DAD24BEDB0600FB60C7 /* FindMajorityBy3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FindMajorityBy3.h; sourceTree = "<group>"; };
+		CD168DAE24BEDB0600FB60C7 /* FindMajorityBy3.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = FindMajorityBy3.c; sourceTree = "<group>"; };
+		CD168DB024C0292800FB60C7 /* TwoSum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwoSum.h; sourceTree = "<group>"; };
+		CD168DB124C0292800FB60C7 /* TwoSum.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = TwoSum.c; sourceTree = "<group>"; };
+		CD168DB324C0F48800FB60C7 /* RotateArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RotateArray.h; sourceTree = "<group>"; };
+		CD168DB424C0F48800FB60C7 /* RotateArray.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = RotateArray.c; sourceTree = "<group>"; };
+		CD168DB624C26C7400FB60C7 /* IsArrayMonotonic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IsArrayMonotonic.h; sourceTree = "<group>"; };
+		CD168DB724C26C7400FB60C7 /* IsArrayMonotonic.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = IsArrayMonotonic.c; sourceTree = "<group>"; };
+		CD168DB924C27DB800FB60C7 /* SquareOfSortedArrays.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SquareOfSortedArrays.h; sourceTree = "<group>"; };
+		CD168DBA24C27DB800FB60C7 /* SquareOfSortedArrays.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = SquareOfSortedArrays.c; sourceTree = "<group>"; };
+		CD168DBC24C6928700FB60C7 /* PermutationArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PermutationArray.h; sourceTree = "<group>"; };
+		CD168DBD24C6928700FB60C7 /* PermutationArray.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = PermutationArray.c; sourceTree = "<group>"; };
+		CD168DBF24C790AD00FB60C7 /* SearchInRotatedArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchInRotatedArray.h; sourceTree = "<group>"; };
+		CD168DC024C790AD00FB60C7 /* SearchInRotatedArray.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = SearchInRotatedArray.c; sourceTree = "<group>"; };
+		CD168DC224C801B800FB60C7 /* FindPivotRotatedArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FindPivotRotatedArray.h; sourceTree = "<group>"; };
+		CD168DC324C801B800FB60C7 /* FindPivotRotatedArray.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = FindPivotRotatedArray.c; sourceTree = "<group>"; };
+		CD9F4C16247E16040098A0F5 /* coding_practice_ds_algo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = coding_practice_ds_algo; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD9F4C19247E16040098A0F5 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		CD9F4C21247E16400098A0F5 /* MergeSortArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MergeSortArray.h; sourceTree = "<group>"; };
+		CD9F4C22247E16400098A0F5 /* MergeSortArray.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = MergeSortArray.c; sourceTree = "<group>"; };
+		CD9F4C25247E1BDE0098A0F5 /* MultiplyUsingBitManipulation.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MultiplyUsingBitManipulation.c; sourceTree = "<group>"; };
+		CD9F4C26247E1BDE0098A0F5 /* ReverseBits.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ReverseBits.c; sourceTree = "<group>"; };
+		CD9F4C27247E1BDE0098A0F5 /* ReverseBits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReverseBits.h; sourceTree = "<group>"; };
+		CD9F4C28247E1BDE0098A0F5 /* ClosestIntSameBitCount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClosestIntSameBitCount.h; sourceTree = "<group>"; };
+		CD9F4C29247E1BDE0098A0F5 /* SwapBits.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SwapBits.c; sourceTree = "<group>"; };
+		CD9F4C2A247E1BDE0098A0F5 /* BitManipulationHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BitManipulationHeader.h; sourceTree = "<group>"; };
+		CD9F4C2B247E1BDE0098A0F5 /* MultiplyUsingBitManipulation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiplyUsingBitManipulation.h; sourceTree = "<group>"; };
+		CD9F4C2C247E1BDE0098A0F5 /* CalculatePower.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatePower.h; sourceTree = "<group>"; };
+		CD9F4C2D247E1BDE0098A0F5 /* ClosestIntSameBitCount.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ClosestIntSameBitCount.c; sourceTree = "<group>"; };
+		CD9F4C2E247E1BDE0098A0F5 /* SwapBits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwapBits.h; sourceTree = "<group>"; };
+		CD9F4C2F247E1BDE0098A0F5 /* CalculatePower.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CalculatePower.c; sourceTree = "<group>"; };
+		CD9F4C35247E1C230098A0F5 /* utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utility.h; sourceTree = "<group>"; };
+		CD9F4C37247E1CB40098A0F5 /* ReverseLinkListRecursive.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ReverseLinkListRecursive.c; sourceTree = "<group>"; };
+		CD9F4C38247E1CB40098A0F5 /* IsPalindromeLinkList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IsPalindromeLinkList.h; sourceTree = "<group>"; };
+		CD9F4C39247E1CB40098A0F5 /* MergeSort.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MergeSort.c; sourceTree = "<group>"; };
+		CD9F4C3A247E1CB40098A0F5 /* MergeSortedList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MergeSortedList.c; sourceTree = "<group>"; };
+		CD9F4C3B247E1CB40098A0F5 /* AddTwoNumbers.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = AddTwoNumbers.c; sourceTree = "<group>"; };
+		CD9F4C3C247E1CB40098A0F5 /* MergeSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MergeSort.h; sourceTree = "<group>"; };
+		CD9F4C3D247E1CB40098A0F5 /* ReverseLinkList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ReverseLinkList.c; sourceTree = "<group>"; };
+		CD9F4C3E247E1CB40098A0F5 /* MergeSortedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MergeSortedList.h; sourceTree = "<group>"; };
+		CD9F4C3F247E1CB40098A0F5 /* LinkList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkList.h; sourceTree = "<group>"; };
+		CD9F4C40247E1CB40098A0F5 /* LinkList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = LinkList.c; sourceTree = "<group>"; };
+		CD9F4C41247E1CB40098A0F5 /* AddTwoNumbers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTwoNumbers.h; sourceTree = "<group>"; };
+		CD9F4C42247E1CB40098A0F5 /* IsPalindromeLinkList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = IsPalindromeLinkList.c; sourceTree = "<group>"; };
+		CD9F4C43247E1CB40098A0F5 /* RemoveDuplicate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemoveDuplicate.h; sourceTree = "<group>"; };
+		CD9F4C44247E1CB50098A0F5 /* RemoveDuplicate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = RemoveDuplicate.c; sourceTree = "<group>"; };
+		CD9F4C45247E1CB50098A0F5 /* ReverseLinkList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReverseLinkList.h; sourceTree = "<group>"; };
+		CD9F4C46247E1CB50098A0F5 /* ReverseLinkListRecursive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReverseLinkListRecursive.h; sourceTree = "<group>"; };
+		CD9F4C47247E1CB50098A0F5 /* LinkList */ = {isa = PBXFileReference; lastKnownFileType = file; path = LinkList; sourceTree = "<group>"; };
+		CD9F4C51247E1D030098A0F5 /* GeneralProblemsHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneralProblemsHeader.h; sourceTree = "<group>"; };
+		CD9F4C52247E1D030098A0F5 /* ReverseDigits.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ReverseDigits.c; sourceTree = "<group>"; };
+		CD9F4C53247E1D030098A0F5 /* ReverseDigits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReverseDigits.h; sourceTree = "<group>"; };
+		CD9F4C56247E1D380098A0F5 /* BinaryTree.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = BinaryTree.c; sourceTree = "<group>"; };
+		CD9F4C57247E1D380098A0F5 /* ConstructFullBTLevelOrder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ConstructFullBTLevelOrder.c; sourceTree = "<group>"; };
+		CD9F4C58247E1D380098A0F5 /* PrintPreOrderBT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrintPreOrderBT.h; sourceTree = "<group>"; };
+		CD9F4C59247E1D380098A0F5 /* PrintInOrderBT.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PrintInOrderBT.c; sourceTree = "<group>"; };
+		CD9F4C5A247E1D380098A0F5 /* ConstructUniqueBTPreInOrder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ConstructUniqueBTPreInOrder.c; sourceTree = "<group>"; };
+		CD9F4C5B247E1D380098A0F5 /* FindHeightBT.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = FindHeightBT.c; sourceTree = "<group>"; };
+		CD9F4C5C247E1D380098A0F5 /* PrintLevelOrderBT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrintLevelOrderBT.h; sourceTree = "<group>"; };
+		CD9F4C5D247E1D380098A0F5 /* PrintPreOrderBT.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PrintPreOrderBT.c; sourceTree = "<group>"; };
+		CD9F4C5E247E1D380098A0F5 /* ConstructBalancedBTInOrder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ConstructBalancedBTInOrder.c; sourceTree = "<group>"; };
+		CD9F4C5F247E1D380098A0F5 /* ConstructBalancedBTInOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConstructBalancedBTInOrder.h; sourceTree = "<group>"; };
+		CD9F4C60247E1D380098A0F5 /* PrintInOrderBT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrintInOrderBT.h; sourceTree = "<group>"; };
+		CD9F4C61247E1D380098A0F5 /* FindHeightBT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindHeightBT.h; sourceTree = "<group>"; };
+		CD9F4C62247E1D380098A0F5 /* BinaryTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinaryTree.h; sourceTree = "<group>"; };
+		CD9F4C63247E1D380098A0F5 /* ConstructFullBTLevelOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConstructFullBTLevelOrder.h; sourceTree = "<group>"; };
+		CD9F4C64247E1D380098A0F5 /* ConstructUniqueBTPreInOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConstructUniqueBTPreInOrder.h; sourceTree = "<group>"; };
+		CD9F4C65247E1D380098A0F5 /* PrintLevelOrderBT.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PrintLevelOrderBT.c; sourceTree = "<group>"; };
+		CD9F4C6F247E203F0098A0F5 /* PrintArray.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PrintArray.c; sourceTree = "<group>"; };
+		CD9F4C70247E203F0098A0F5 /* ArrayHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayHeader.h; sourceTree = "<group>"; };
+		CD9F4C71247E203F0098A0F5 /* MinimumLengthSubArrayWithSum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MinimumLengthSubArrayWithSum.h; sourceTree = "<group>"; };
+		CD9F4C72247E203F0098A0F5 /* MinimumLengthSubArrayWithSum.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MinimumLengthSubArrayWithSum.c; sourceTree = "<group>"; };
+		CD9F4C73247E203F0098A0F5 /* FindMajority.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = FindMajority.c; sourceTree = "<group>"; };
+		CD9F4C74247E203F0098A0F5 /* FirstDuplicateInArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstDuplicateInArray.h; sourceTree = "<group>"; };
+		CD9F4C75247E203F0098A0F5 /* MaximumSumSubArray.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MaximumSumSubArray.c; sourceTree = "<group>"; };
+		CD9F4C76247E203F0098A0F5 /* PrintArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrintArray.h; sourceTree = "<group>"; };
+		CD9F4C77247E203F0098A0F5 /* FindMajority.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindMajority.h; sourceTree = "<group>"; };
+		CD9F4C78247E20400098A0F5 /* MaximumSumSubArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaximumSumSubArray.h; sourceTree = "<group>"; };
+		CD9F4C7A247E20400098A0F5 /* FirstDuplicateInArray.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = FirstDuplicateInArray.c; sourceTree = "<group>"; };
+		CD9F4C83247E21200098A0F5 /* DFS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFS.h; sourceTree = "<group>"; };
+		CD9F4C84247E21200098A0F5 /* Graph */ = {isa = PBXFileReference; lastKnownFileType = file; path = Graph; sourceTree = "<group>"; };
+		CD9F4C85247E21210098A0F5 /* Graph.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Graph.c; sourceTree = "<group>"; };
+		CD9F4C86247E21210098A0F5 /* BFS.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = BFS.c; sourceTree = "<group>"; };
+		CD9F4C87247E21210098A0F5 /* DFS.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = DFS.c; sourceTree = "<group>"; };
+		CD9F4C88247E21210098A0F5 /* BFS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFS.h; sourceTree = "<group>"; };
+		CD9F4C89247E21210098A0F5 /* Graph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Graph.h; sourceTree = "<group>"; };
+		CD9F4C8E247E21960098A0F5 /* FindPathInMaze.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindPathInMaze.h; sourceTree = "<group>"; };
+		CD9F4C8F247E21960098A0F5 /* FindPathInMaze.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = FindPathInMaze.c; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CD9F4C13247E16040098A0F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CD9F4C0D247E16040098A0F5 = {
+			isa = PBXGroup;
+			children = (
+				CD9F4C18247E16040098A0F5 /* coding_practice_ds_algo */,
+				CD9F4C17247E16040098A0F5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CD9F4C17247E16040098A0F5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CD9F4C16247E16040098A0F5 /* coding_practice_ds_algo */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CD9F4C18247E16040098A0F5 /* coding_practice_ds_algo */ = {
+			isa = PBXGroup;
+			children = (
+				CD9F4C8D247E21740098A0F5 /* Backtracking */,
+				CD9F4C82247E20F60098A0F5 /* Graph */,
+				CD9F4C6E247E20090098A0F5 /* Array */,
+				CD9F4C55247E1D120098A0F5 /* BinaryTree */,
+				CD9F4C50247E1CCB0098A0F5 /* GeneralProblems */,
+				CD9F4C36247E1C710098A0F5 /* LinkList */,
+				CD9F4C24247E1BAA0098A0F5 /* BitManipulation */,
+				CD9F4C20247E16140098A0F5 /* Sorting */,
+				CD9F4C19247E16040098A0F5 /* main.c */,
+				CD9F4C35247E1C230098A0F5 /* utility.h */,
+			);
+			path = coding_practice_ds_algo;
+			sourceTree = "<group>";
+		};
+		CD9F4C20247E16140098A0F5 /* Sorting */ = {
+			isa = PBXGroup;
+			children = (
+				CD9F4C21247E16400098A0F5 /* MergeSortArray.h */,
+				CD9F4C22247E16400098A0F5 /* MergeSortArray.c */,
+			);
+			path = Sorting;
+			sourceTree = "<group>";
+		};
+		CD9F4C24247E1BAA0098A0F5 /* BitManipulation */ = {
+			isa = PBXGroup;
+			children = (
+				CD9F4C2A247E1BDE0098A0F5 /* BitManipulationHeader.h */,
+				CD9F4C2F247E1BDE0098A0F5 /* CalculatePower.c */,
+				CD9F4C2C247E1BDE0098A0F5 /* CalculatePower.h */,
+				CD9F4C2D247E1BDE0098A0F5 /* ClosestIntSameBitCount.c */,
+				CD9F4C28247E1BDE0098A0F5 /* ClosestIntSameBitCount.h */,
+				CD9F4C25247E1BDE0098A0F5 /* MultiplyUsingBitManipulation.c */,
+				CD9F4C2B247E1BDE0098A0F5 /* MultiplyUsingBitManipulation.h */,
+				CD9F4C26247E1BDE0098A0F5 /* ReverseBits.c */,
+				CD9F4C27247E1BDE0098A0F5 /* ReverseBits.h */,
+				CD9F4C29247E1BDE0098A0F5 /* SwapBits.c */,
+				CD9F4C2E247E1BDE0098A0F5 /* SwapBits.h */,
+			);
+			path = BitManipulation;
+			sourceTree = "<group>";
+		};
+		CD9F4C36247E1C710098A0F5 /* LinkList */ = {
+			isa = PBXGroup;
+			children = (
+				CD9F4C3B247E1CB40098A0F5 /* AddTwoNumbers.c */,
+				CD9F4C41247E1CB40098A0F5 /* AddTwoNumbers.h */,
+				CD9F4C42247E1CB40098A0F5 /* IsPalindromeLinkList.c */,
+				CD9F4C38247E1CB40098A0F5 /* IsPalindromeLinkList.h */,
+				CD9F4C47247E1CB50098A0F5 /* LinkList */,
+				CD9F4C40247E1CB40098A0F5 /* LinkList.c */,
+				CD9F4C3F247E1CB40098A0F5 /* LinkList.h */,
+				CD9F4C39247E1CB40098A0F5 /* MergeSort.c */,
+				CD9F4C3C247E1CB40098A0F5 /* MergeSort.h */,
+				CD9F4C3A247E1CB40098A0F5 /* MergeSortedList.c */,
+				CD9F4C3E247E1CB40098A0F5 /* MergeSortedList.h */,
+				CD9F4C44247E1CB50098A0F5 /* RemoveDuplicate.c */,
+				CD9F4C43247E1CB40098A0F5 /* RemoveDuplicate.h */,
+				CD9F4C3D247E1CB40098A0F5 /* ReverseLinkList.c */,
+				CD9F4C45247E1CB50098A0F5 /* ReverseLinkList.h */,
+				CD9F4C37247E1CB40098A0F5 /* ReverseLinkListRecursive.c */,
+				CD9F4C46247E1CB50098A0F5 /* ReverseLinkListRecursive.h */,
+			);
+			path = LinkList;
+			sourceTree = "<group>";
+		};
+		CD9F4C50247E1CCB0098A0F5 /* GeneralProblems */ = {
+			isa = PBXGroup;
+			children = (
+				CD9F4C51247E1D030098A0F5 /* GeneralProblemsHeader.h */,
+				CD9F4C52247E1D030098A0F5 /* ReverseDigits.c */,
+				CD9F4C53247E1D030098A0F5 /* ReverseDigits.h */,
+			);
+			path = GeneralProblems;
+			sourceTree = "<group>";
+		};
+		CD9F4C55247E1D120098A0F5 /* BinaryTree */ = {
+			isa = PBXGroup;
+			children = (
+				CD9F4C56247E1D380098A0F5 /* BinaryTree.c */,
+				CD9F4C62247E1D380098A0F5 /* BinaryTree.h */,
+				CD9F4C5E247E1D380098A0F5 /* ConstructBalancedBTInOrder.c */,
+				CD9F4C5F247E1D380098A0F5 /* ConstructBalancedBTInOrder.h */,
+				CD9F4C57247E1D380098A0F5 /* ConstructFullBTLevelOrder.c */,
+				CD9F4C63247E1D380098A0F5 /* ConstructFullBTLevelOrder.h */,
+				CD9F4C5A247E1D380098A0F5 /* ConstructUniqueBTPreInOrder.c */,
+				CD9F4C64247E1D380098A0F5 /* ConstructUniqueBTPreInOrder.h */,
+				CD9F4C5B247E1D380098A0F5 /* FindHeightBT.c */,
+				CD9F4C61247E1D380098A0F5 /* FindHeightBT.h */,
+				CD9F4C59247E1D380098A0F5 /* PrintInOrderBT.c */,
+				CD9F4C60247E1D380098A0F5 /* PrintInOrderBT.h */,
+				CD9F4C65247E1D380098A0F5 /* PrintLevelOrderBT.c */,
+				CD9F4C5C247E1D380098A0F5 /* PrintLevelOrderBT.h */,
+				CD9F4C5D247E1D380098A0F5 /* PrintPreOrderBT.c */,
+				CD9F4C58247E1D380098A0F5 /* PrintPreOrderBT.h */,
+			);
+			path = BinaryTree;
+			sourceTree = "<group>";
+		};
+		CD9F4C6E247E20090098A0F5 /* Array */ = {
+			isa = PBXGroup;
+			children = (
+				CD9F4C70247E203F0098A0F5 /* ArrayHeader.h */,
+				CD9F4C73247E203F0098A0F5 /* FindMajority.c */,
+				CD9F4C77247E203F0098A0F5 /* FindMajority.h */,
+				CD168DAD24BEDB0600FB60C7 /* FindMajorityBy3.h */,
+				CD168DAE24BEDB0600FB60C7 /* FindMajorityBy3.c */,
+				CD9F4C7A247E20400098A0F5 /* FirstDuplicateInArray.c */,
+				CD9F4C74247E203F0098A0F5 /* FirstDuplicateInArray.h */,
+				CD9F4C75247E203F0098A0F5 /* MaximumSumSubArray.c */,
+				CD9F4C78247E20400098A0F5 /* MaximumSumSubArray.h */,
+				CD9F4C72247E203F0098A0F5 /* MinimumLengthSubArrayWithSum.c */,
+				CD9F4C71247E203F0098A0F5 /* MinimumLengthSubArrayWithSum.h */,
+				CD9F4C6F247E203F0098A0F5 /* PrintArray.c */,
+				CD9F4C76247E203F0098A0F5 /* PrintArray.h */,
+				CD168DA824B00FC400FB60C7 /* MedianUnionSortedArrays.c */,
+				CD168DA724B00FC400FB60C7 /* MedianUnionSortedArrays.h */,
+				CD168DA424AD88AE00FB60C7 /* KthSmallestUnionSortedArray.h */,
+				CD168DA524AD88AE00FB60C7 /* KthSmallestUnionSortedArray.c */,
+				CD168DAB24BC0F7E00FB60C7 /* KthSmallestUnsortedArray.c */,
+				CD168DAA24BC0F7E00FB60C7 /* KthSmallestUnsortedArray.h */,
+				CD168DB024C0292800FB60C7 /* TwoSum.h */,
+				CD168DB124C0292800FB60C7 /* TwoSum.c */,
+				CD168DB324C0F48800FB60C7 /* RotateArray.h */,
+				CD168DB424C0F48800FB60C7 /* RotateArray.c */,
+				CD168DB624C26C7400FB60C7 /* IsArrayMonotonic.h */,
+				CD168DB724C26C7400FB60C7 /* IsArrayMonotonic.c */,
+				CD168DB924C27DB800FB60C7 /* SquareOfSortedArrays.h */,
+				CD168DBA24C27DB800FB60C7 /* SquareOfSortedArrays.c */,
+				CD168DBC24C6928700FB60C7 /* PermutationArray.h */,
+				CD168DBD24C6928700FB60C7 /* PermutationArray.c */,
+				CD168DBF24C790AD00FB60C7 /* SearchInRotatedArray.h */,
+				CD168DC024C790AD00FB60C7 /* SearchInRotatedArray.c */,
+				CD168DC224C801B800FB60C7 /* FindPivotRotatedArray.h */,
+				CD168DC324C801B800FB60C7 /* FindPivotRotatedArray.c */,
+			);
+			path = Array;
+			sourceTree = "<group>";
+		};
+		CD9F4C82247E20F60098A0F5 /* Graph */ = {
+			isa = PBXGroup;
+			children = (
+				CD9F4C86247E21210098A0F5 /* BFS.c */,
+				CD9F4C88247E21210098A0F5 /* BFS.h */,
+				CD9F4C87247E21210098A0F5 /* DFS.c */,
+				CD9F4C83247E21200098A0F5 /* DFS.h */,
+				CD9F4C84247E21200098A0F5 /* Graph */,
+				CD9F4C85247E21210098A0F5 /* Graph.c */,
+				CD9F4C89247E21210098A0F5 /* Graph.h */,
+			);
+			path = Graph;
+			sourceTree = "<group>";
+		};
+		CD9F4C8D247E21740098A0F5 /* Backtracking */ = {
+			isa = PBXGroup;
+			children = (
+				CD9F4C8F247E21960098A0F5 /* FindPathInMaze.c */,
+				CD9F4C8E247E21960098A0F5 /* FindPathInMaze.h */,
+			);
+			path = Backtracking;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CD9F4C15247E16040098A0F5 /* coding_practice_ds_algo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD9F4C1D247E16040098A0F5 /* Build configuration list for PBXNativeTarget "coding_practice_ds_algo" */;
+			buildPhases = (
+				CD9F4C12247E16040098A0F5 /* Sources */,
+				CD9F4C13247E16040098A0F5 /* Frameworks */,
+				CD9F4C14247E16040098A0F5 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = coding_practice_ds_algo;
+			productName = coding_practice_ds_algo;
+			productReference = CD9F4C16247E16040098A0F5 /* coding_practice_ds_algo */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CD9F4C0E247E16040098A0F5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = "Vishal Srivastav";
+				TargetAttributes = {
+					CD9F4C15247E16040098A0F5 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+				};
+			};
+			buildConfigurationList = CD9F4C11247E16040098A0F5 /* Build configuration list for PBXProject "coding_practice_ds_algo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CD9F4C0D247E16040098A0F5;
+			productRefGroup = CD9F4C17247E16040098A0F5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CD9F4C15247E16040098A0F5 /* coding_practice_ds_algo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CD9F4C12247E16040098A0F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD9F4C8C247E21210098A0F5 /* DFS.c in Sources */,
+				CD9F4C54247E1D030098A0F5 /* ReverseDigits.c in Sources */,
+				CD168DB224C0292800FB60C7 /* TwoSum.c in Sources */,
+				CD9F4C31247E1BDE0098A0F5 /* ReverseBits.c in Sources */,
+				CD168DB824C26C7400FB60C7 /* IsArrayMonotonic.c in Sources */,
+				CD9F4C6A247E1D390098A0F5 /* FindHeightBT.c in Sources */,
+				CD9F4C48247E1CB50098A0F5 /* ReverseLinkListRecursive.c in Sources */,
+				CD9F4C7E247E20400098A0F5 /* FindMajority.c in Sources */,
+				CD9F4C6B247E1D390098A0F5 /* PrintPreOrderBT.c in Sources */,
+				CD9F4C6C247E1D390098A0F5 /* ConstructBalancedBTInOrder.c in Sources */,
+				CD9F4C23247E16400098A0F5 /* MergeSortArray.c in Sources */,
+				CD168DAF24BEDB0600FB60C7 /* FindMajorityBy3.c in Sources */,
+				CD9F4C68247E1D390098A0F5 /* PrintInOrderBT.c in Sources */,
+				CD9F4C49247E1CB50098A0F5 /* MergeSort.c in Sources */,
+				CD168DBE24C6928700FB60C7 /* PermutationArray.c in Sources */,
+				CD9F4C4F247E1CB50098A0F5 /* RemoveDuplicate.c in Sources */,
+				CD9F4C1A247E16040098A0F5 /* main.c in Sources */,
+				CD9F4C7D247E20400098A0F5 /* MinimumLengthSubArrayWithSum.c in Sources */,
+				CD9F4C7C247E20400098A0F5 /* PrintArray.c in Sources */,
+				CD9F4C6D247E1D390098A0F5 /* PrintLevelOrderBT.c in Sources */,
+				CD9F4C33247E1BDE0098A0F5 /* ClosestIntSameBitCount.c in Sources */,
+				CD168DA624AD88AE00FB60C7 /* KthSmallestUnionSortedArray.c in Sources */,
+				CD9F4C8B247E21210098A0F5 /* BFS.c in Sources */,
+				CD9F4C4D247E1CB50098A0F5 /* LinkList.c in Sources */,
+				CD9F4C30247E1BDE0098A0F5 /* MultiplyUsingBitManipulation.c in Sources */,
+				CD168DBB24C27DB800FB60C7 /* SquareOfSortedArrays.c in Sources */,
+				CD9F4C67247E1D390098A0F5 /* ConstructFullBTLevelOrder.c in Sources */,
+				CD9F4C66247E1D390098A0F5 /* BinaryTree.c in Sources */,
+				CD168DA924B00FC400FB60C7 /* MedianUnionSortedArrays.c in Sources */,
+				CD9F4C81247E20400098A0F5 /* FirstDuplicateInArray.c in Sources */,
+				CD9F4C8A247E21210098A0F5 /* Graph.c in Sources */,
+				CD9F4C4E247E1CB50098A0F5 /* IsPalindromeLinkList.c in Sources */,
+				CD9F4C7F247E20400098A0F5 /* MaximumSumSubArray.c in Sources */,
+				CD168DC424C801B800FB60C7 /* FindPivotRotatedArray.c in Sources */,
+				CD9F4C90247E21960098A0F5 /* FindPathInMaze.c in Sources */,
+				CD168DC124C790AD00FB60C7 /* SearchInRotatedArray.c in Sources */,
+				CD9F4C69247E1D390098A0F5 /* ConstructUniqueBTPreInOrder.c in Sources */,
+				CD9F4C4A247E1CB50098A0F5 /* MergeSortedList.c in Sources */,
+				CD9F4C4C247E1CB50098A0F5 /* ReverseLinkList.c in Sources */,
+				CD9F4C4B247E1CB50098A0F5 /* AddTwoNumbers.c in Sources */,
+				CD9F4C32247E1BDE0098A0F5 /* SwapBits.c in Sources */,
+				CD168DAC24BC0F7E00FB60C7 /* KthSmallestUnsortedArray.c in Sources */,
+				CD9F4C34247E1BDE0098A0F5 /* CalculatePower.c in Sources */,
+				CD168DB524C0F48800FB60C7 /* RotateArray.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		CD9F4C1B247E16040098A0F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		CD9F4C1C247E16040098A0F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		CD9F4C1E247E16040098A0F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CD9F4C1F247E16040098A0F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CD9F4C11247E16040098A0F5 /* Build configuration list for PBXProject "coding_practice_ds_algo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD9F4C1B247E16040098A0F5 /* Debug */,
+				CD9F4C1C247E16040098A0F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD9F4C1D247E16040098A0F5 /* Build configuration list for PBXNativeTarget "coding_practice_ds_algo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD9F4C1E247E16040098A0F5 /* Debug */,
+				CD9F4C1F247E16040098A0F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CD9F4C0E247E16040098A0F5 /* Project object */;
+}
