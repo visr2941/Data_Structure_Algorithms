@@ -57,6 +57,13 @@ void towerOfHanoi_recursive_just_number(int n, char src, char dest, char aux)
     towerOfHanoi_recursive_just_number(n-1, aux, dest, src);
 }
 
+/*
+this is what needs to be done to solve tower of hanoi iteratively. Check out the pattern it's following.
+A->X, A->B, X->B
+A->X, B->A, B->X
+A->X, A->B, X->B
+X->A, B->A, X->B
+*/
 void towerOfHanoi_iterative(int n, rod_t& src, rod_t& dest, rod_t& aux)
 {
     int total_iteration = (pow(2, n) - 1)/3;
